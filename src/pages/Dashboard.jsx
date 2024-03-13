@@ -3,6 +3,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+
   const disconnect = () => {
     sessionStorage.removeItem("userData");
     navigate("/");

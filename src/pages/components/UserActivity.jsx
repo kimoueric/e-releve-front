@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReleveCard from "./ReleveCard";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const UserActivity = () => {
   const [userData, setUserData] = useState();
 
-  const queryClient = useQueryClient();
   const { data: stories } = useQuery({
     queryKey: ["stories"],
     queryFn: () => {

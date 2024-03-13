@@ -4,33 +4,49 @@
       "id": "1",
       "email": "john.doe@example.com",
       "mdp": "motdepasse1",
+      "name": "John",
+      "last_name": "Doe",
       "nom_organisation": "Société XYZ",
       "type_entreprise": "banque",
-      "photo_url": "https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1483"
+      "adresse_entreprise": "123 Rue de la Liberté, Ville, Pays",
+      "photo_url": "https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1483",
+      "logo_url": "https://th.bing.com/th/id/OIP.zTP26HP6pteTFHdPgMjv5gHaHa?rs=1&pid=ImgDetMain"
     },
     {
       "id": "2",
       "email": "jane.doe@example.com",
       "mdp": "p@ssw0rd",
+      "name": "Jane",
+      "last_name": "Doe",
       "nom_organisation": "Compagnie ABC",
       "type_entreprise": "assurance",
-      "photo_url": "https://clipart-library.com/images/kTKo7BB8c.png"
+      "adresse_entreprise": "456 Avenue du Progrès, Ville, Pays",
+      "photo_url": "https://clipart-library.com/images/kTKo7BB8c.png",
+      "logo_url": "https://www.instafric-elec.com/wp-content/uploads/2017/04/Logo_SGBCI_2014.png"
     },
     {
       "id": "3",
       "email": "utilisateur2@example.com",
       "mdp": "john123",
+      "name": "",
+      "last_name": "",
       "nom_organisation": "Startup Innovante",
       "type_entreprise": "banque",
-      "photo_url": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+      "adresse_entreprise": "789 Rue de l'Espoir, Ville, Pays",
+      "photo_url": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png",
+      "logo_url": "https://annuaire.mg/wp-content/uploads/2016/09/boa-bank-of-africa.jpg"
     },
     {
       "id": "4",
       "email": "anotheruser@example.com",
       "mdp": "password123",
+      "name": "",
+      "last_name": "",
       "nom_organisation": "Entreprise D",
       "type_entreprise": "assurance",
-      "photo_url": "https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg"
+      "adresse_entreprise": "1010 Boulevard de la Liberté, Ville, Pays",
+      "photo_url": "https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg",
+      "logo_url": "https://i1.wp.com/apbef-bj.org/wp-content/uploads/2017/03/logo-coris-bank.jpg?fit=500%2C300&ssl=1"
     }
   ],
 

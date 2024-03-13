@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 const Configuration = () => {
   const navigate = useNavigate();
-
+  const userData = JSON.parse(sessionStorage.getItem("userData"));
   const {
     register,
     handleSubmit,
@@ -47,7 +47,10 @@ const Configuration = () => {
                 <input
                   type="text"
                   className="border-2 w-80 p-3 border-indigo-950 rounded outline-none"
-                  {...register("fullname", { required: true })}
+                  {...register("fullname", {
+                    required: true,
+                    value: ` ${userData[0].name} ${userData[0].last_name} `,
+                  })}
                 />
               </div>
 
@@ -56,24 +59,33 @@ const Configuration = () => {
                 <input
                   type="email"
                   className="border-2 w-80 p-3   border-indigo-950 rounded outline-none"
-                  {...register("email", { required: true })}
+                  {...register("email", {
+                    required: true,
+                    value: ` ${userData[0].email} `,
+                  })}
                 />
               </div>
-              <div className="flex flex-col my-2">
+              {/* <div className="flex flex-col my-2">
                 <label htmlFor="mdp">Mot de passe</label>
                 <input
                   type="password"
                   className="border-2 w-80 p-3 border-indigo-950 rounded outline-none"
-                  {...register("password", { required: true })}
+                  {...register("password", {
+                    required: true,
+                    value: ` ${userData[0].mdp} `,
+                  })}
                 />
-              </div>
+              </div> */}
 
               <div className="flex flex-col my-2">
                 <label htmlFor="nomOrg">Nom de l'organisation</label>
                 <input
                   type="text"
                   className="border-2 w-80 p-3 border-indigo-950 rounded outline-none"
-                  {...register("organisationName", { required: true })}
+                  {...register("organisationName", {
+                    required: true,
+                    value: ` ${userData[0].nom_organisation} `,
+                  })}
                 />
               </div>
 
@@ -82,14 +94,17 @@ const Configuration = () => {
                 <input
                   type="text"
                   className="border-2 w-80 p-3 border-indigo-950 rounded outline-none"
-                  {...register("adress", { required: true })}
+                  {...register("adress", {
+                    required: true,
+                    value: ` ${userData[0].adresse_entreprise} `,
+                  })}
                 />
               </div>
 
               <div className="flex flex-col my-2">
                 <label htmlFor="adresse">Logo de l'organisation</label>
-                <div className="w-[50px] h-[50px] border my-3 border-xl border-indigo-950">
-                  <img src="" alt="" />
+                <div className="w-[60px] h-[60px]  my-3 ">
+                  <img src={`${userData[0].logo_url}`} alt="logo" />
                 </div>
                 <input
                   type="file"
@@ -109,7 +124,14 @@ const Configuration = () => {
             </div>
             {/* right container  */}
             <div>
-              <div className="w-96 h-96 border border-2xl rounded-full  border-indigo-950"></div>
+              <div className="w-96 h-96 ">
+                <img
+                  src={`${userData[0].photo_url}`}
+                  alt="photo"
+                  className=" rounded-full border"
+                  width={"100%"}
+                />
+              </div>
               <div className="flex justify-center items-center  ">
                 <label
                   htmlFor="avatar"

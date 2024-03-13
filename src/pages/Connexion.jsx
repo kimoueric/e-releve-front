@@ -11,8 +11,6 @@ const Connexion = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data.email);
-    console.log(`http://localhost:3000/users?email=${data.email}`);
     try {
       let options = {
         method: "GET",
