@@ -4,8 +4,10 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const navigate = useNavigate();
   const disconnect = () => {
+    sessionStorage.removeItem("userData");
     navigate("/");
   };
+
   return (
     <div>
       <div key="1" className="h-screen bg-white flex ">

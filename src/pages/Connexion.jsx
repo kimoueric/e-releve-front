@@ -11,28 +11,25 @@ const Connexion = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-//     if (data) navigate("/dashboard");
-
+    console.log(data.email);
+    console.log(`http://localhost:3000/users?email=${data.email}`);
     try {
       let options = {
-        method: "POST",
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
-        body : JSON.stringify(data)
       };
 
       const response = await fetch(
-        `http://localhost:8080/api/utilisateur/connexion`,
-        options ,
-
+        `http://localhost:3000/users?email=${data.email}`,
+        options
       );
 
       if (response.ok) {
         const userData = await response.json();
-//         navigate("/dashboard", { state: { userData } })
-        console.log(userData.body);
-;
+        sessionStorage.setItem("userData", JSON.stringify(userData));
+        navigate("/dashboard");
       }
     } catch (error) {
       console.error("Erreur lors de la requête :", error);

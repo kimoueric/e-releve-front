@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "john.doe@example.com",
+      "mdp": "motdepasse1",
+      "nom_organisation": "Société XYZ",
+      "type_entreprise": "banque",
+      "photo_url": "https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1483"
+    },
+    {
+      "id": "2",
+      "email": "jane.doe@example.com",
+      "mdp": "p@ssw0rd",
+      "nom_organisation": "Compagnie ABC",
+      "type_entreprise": "assurance",
+      "photo_url": "https://clipart-library.com/images/kTKo7BB8c.png"
+    },
+    {
+      "id": "3",
+      "email": "utilisateur2@example.com",
+      "mdp": "john123",
+      "nom_organisation": "Startup Innovante",
+      "type_entreprise": "banque",
+      "photo_url": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+    },
+    {
+      "id": "4",
+      "email": "anotheruser@example.com",
+      "mdp": "password123",
+      "nom_organisation": "Entreprise D",
+      "type_entreprise": "assurance",
+      "photo_url": "https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg"
+    }
+  ],
+
+  "historiques": [
+    {
+      "id_utilisateur": 1,
+      "operations": [
+        {
+          "description": "Compte épargne",
+          "date": "2024-03-15",
+          "taux_envoi": 50
+        },
+        {
+          "description": "Compte courant",
+          "date": "2024-03-15",
+          "taux_envoi": 30
+        },
+        {
+          "description": "Compte de prêt",
+          "date": "2024-03-15",
+          "taux_envoi": 20
+        }
+      ]
+    },
+    {
+      "id_utilisateur": 2,
+      "operations": [
+        {
+          "description": "Compte épargne",
+          "date": "2024-03-15",
+          "taux_envoi": 40
+        },
+        {
+          "description": "Compte courant",
+          "date": "2024-03-15",
+          "taux_envoi": 30
+        },
+        {
+          "description": "Compte de prêt",
+          "date": "2024-03-15",
+          "taux_envoi": 30
+        }
+      ]
+    },
+    {
+      "id_utilisateur": 3,
+      "operations": [
+        {
+          "description": "Compte épargne",
+          "date": "2024-03-15",
+          "taux_envoi": 60
+        },
+        {
+          "description": "Compte courant",
+          "date": "2024-03-15",
+          "taux_envoi": 20
+        },
+        {
+          "description": "Compte de prêt",
+          "date": "2024-03-15",
+          "taux_envoi": 20
+        }
+      ]
+    },
+    {
+      "id_utilisateur": 4,
+      "operations": [
+        {
+          "description": "Compte épargne",
+          "date": "2024-03-15",
+          "taux_envoi": 70
+        }
+      ]
+    }
+  ]
+}

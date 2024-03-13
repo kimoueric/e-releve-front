@@ -3,7 +3,8 @@ import React from "react";
 import IndexBank from "./components/Models/Banque/IndexBank";
 import IndexAssurance from "./components/Models/Assurance/IndexAssurance";
 const Releve = () => {
-  const id = localStorage.getItem("modeleId");
+  // const id = localStorage.getItem("modeleId");
+  const id = 1;
   const type = "Banque";
 
   return (

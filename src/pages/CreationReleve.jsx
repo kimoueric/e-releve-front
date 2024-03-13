@@ -108,7 +108,7 @@ const CreationReleve = () => {
                 errors.format ? "border-red-500" : ""
               }`}
             >
-              <option value="pdf">courant</option>
+              {/* <option value="pdf">courant</option> */}
             </select>
           </div>
           <div className={`flex flex-col my-2 ${errors.date && "has-error"}`}>

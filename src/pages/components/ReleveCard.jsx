@@ -12,16 +12,16 @@ const ReleveCard = ({ data }) => {
           <div
             className="h-full bg-indigo-950 rounded-full"
             style={{
-              width: `${data.tauxProgression}%`,
+              width: `${data.taux_envoi}%`,
             }}
           />
         </div>
         <p className="text-xs text-gray-500 mb-2">
-          {data.tauxProgression && data.tauxProgression}% de releves envoye
+          {data.taux_envoi && data.taux_envoi}% de releves envoye
         </p>
-        <button className="bg-indigo-950 hover:bg-blue-700 text-white font-bold py-1 px-2 text-xs rounded-2xl">
+        {/* <button className="bg-indigo-950 hover:bg-blue-700 text-white font-bold py-1 px-2 text-xs rounded-2xl">
           Voir details du relevé
-        </button>
+        </button> */}
       </div>
     </div>
   );
