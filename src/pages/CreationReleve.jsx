@@ -1,17 +1,38 @@
+import { useQuery } from "@tanstack/react-query";
 import background from "../assets/bacground.jpeg";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const CreationReleve = () => {
   const navigate = useNavigate();
-
+  const [checkedItems, setCheckedItems] = useState([]);
+  const dataU = JSON.parse(sessionStorage.getItem("userData"));
+  const id = dataU[0].id;
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const { data: dataUser } = useQuery({
+    queryKey: ["dataUser"],
+    queryFn: () => {
+      return axios
+        .get(`http://localhost:3000/donnees?id_utilisateur=${id}`)
+        .then((res) => res.data[0].type_service);
+    },
+  });
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+
+    if (checked) {
+      setCheckedItems([...checkedItems, name]);
+    } else {
+      setCheckedItems(checkedItems.filter((item) => item !== name));
+    }
+  };
   const onSubmit = (data) => {
     localStorage.setItem("modeleId", data.modele);
     if (data) navigate("/releve");
@@ -19,7 +40,7 @@ const CreationReleve = () => {
 
   return (
     <div
-      className="text-xs flex justify-center py-8 backgroung-local"
+      className="text-xs flex justify-center py-8 background-local"
       style={{
         background: `url(${background})`,
       }}
@@ -108,13 +129,20 @@ const CreationReleve = () => {
                 errors.format ? "border-red-500" : ""
               }`}
             >
-              {/* <option value="pdf">courant</option> */}
+              {dataUser &&
+                dataUser.map((element, index) => {
+                  return (
+                    <option key={index} value="pdf">
+                      {element}
+                    </option>
+                  );
+                })}
             </select>
           </div>
           <div className={`flex flex-col my-2 ${errors.date && "has-error"}`}>
             <label htmlFor="frequence">Choisir la fréquence d'envoi</label>
             <input
-              type="datetime-local"
+              type="date"
               className={`border-2 w-[460px] p-3 border-indigo-950 rounded outline-none ${
                 errors.date ? "border-red-500" : ""
               }`}
@@ -133,7 +161,23 @@ const CreationReleve = () => {
               <option value="pdf">PDF</option>
             </select>
           </div>
+          <fieldset className="h-[200px] overflow-auto border-2  p-3 border-indigo-950 rounded outline-none">
+            <legend className="text-sm mb-1">
+              Selectionner les informations a afficher sur le releve
+            </legend>
 
+            <div className=" ">
+              <label class="">
+                Create a to do list
+                <input
+                  type="checkbox"
+                  name="todo"
+                  onChange={handleCheckboxChange}
+                  className="checked:bg-blue-500"
+                />
+              </label>
+            </div>
+          </fieldset>
           <button
             type="submit"
             className="w-44 my-6 rounded-xl p-3 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30"

@@ -124,11 +124,11 @@ const Configuration = () => {
             </div>
             {/* right container  */}
             <div>
-              <div className="w-96 h-96 ">
+              <div className="w-96 h-96  rounded-full p-1">
                 <img
                   src={`${userData[0].photo_url}`}
                   alt="photo"
-                  className=" rounded-full border"
+                  className=" rounded-full "
                   width={"100%"}
                 />
               </div>

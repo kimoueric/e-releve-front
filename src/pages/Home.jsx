@@ -19,8 +19,8 @@ const Home = () => {
       {/* first container */}
       <div className="flex mt-[110px]">
         {/* left container */}
-        <div className=" p-8">
-          <p className="text-4xl text-indigo-950">
+        <div className=" p-8 ">
+          <p className="text-4xl text-indigo-950 ">
             Bienvenue sur HIFADIH E-RELEVE, la plateforme e-relevé qui vous
             simplifie la vie. Connectez-vous et vivez une expérience utilisateur
             géniale.

@@ -7,7 +7,7 @@
       "name": "John",
       "last_name": "Doe",
       "nom_organisation": "Société XYZ",
-      "type_entreprise": "banque",
+      "type_entreprise": "assurance/banque",
       "adresse_entreprise": "123 Rue de la Liberté, Ville, Pays",
       "photo_url": "https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1483",
       "logo_url": "https://th.bing.com/th/id/OIP.zTP26HP6pteTFHdPgMjv5gHaHa?rs=1&pid=ImgDetMain"
@@ -118,6 +118,92 @@
           "description": "Compte épargne",
           "date": "2024-03-15",
           "taux_envoi": 70
+        }
+      ]
+    }
+  ],
+
+  "donnees": [
+    {
+      "id_utilisateur": 1,
+      "type_service": ["compte courant", "compte epargne", "compte pret"],
+      "devise": "EUR",
+      "donneesClients": [
+        {
+          "fullName": "John Doe",
+          "adress": "123 Main Street",
+          "numero": "123456789",
+          "comptes": {
+            "courant": {
+              "numeroCompte": "C123456",
+              "solde": 1500,
+              "soldeMoisPrecedent": 1400,
+
+              "fraisBancaires": [
+                {
+                  "description": "Frais de service",
+                  "montant": 10
+                },
+                {
+                  "description": "Frais de découvert",
+                  "montant": 20
+                }
+              ],
+              "transactions": [
+                {
+                  "id": "1",
+                  "date": "2023-02-01",
+                  "type": "debit",
+                  "description": "Achat mensuel",
+                  "montant": 100
+                },
+
+                {
+                  "id": "2",
+                  "date": "2023-02-15",
+                  "type": "credit",
+                  "description": "Salaire",
+                  "montant": 300
+                },
+                {
+                  "id": "3",
+                  "date": "2023-02-18",
+                  "type": "credit",
+                  "description": "Depot regulier",
+                  "montant": 800
+                },
+                {
+                  "id": "4",
+                  "date": "2023-02-24",
+                  "type": "debit",
+                  "description": "Achat fourniture",
+                  "montant": 2000
+                }
+              ]
+            },
+            "epargne": {
+              "numeroCompte": "E789012",
+              "solde": 5000,
+              "soldeMoisPrecedent": 4900,
+
+              "transactions": [
+                {
+                  "id": "1",
+                  "date": "2023-02-05",
+                  "type": "debit",
+                  "description": "Retrait ATM",
+                  "montant": 50
+                },
+                {
+                  "id": "2",
+                  "date": "2023-02-20",
+                  "type": "credit",
+                  "description": "Dépôt épargne",
+                  "montant": 200
+                }
+              ]
+            }
+          }
         }
       ]
     }
