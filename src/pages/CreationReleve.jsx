@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { displayData } from "../assets/displayData";
 
 const CreationReleve = () => {
   const navigate = useNavigate();
@@ -15,6 +16,19 @@ const CreationReleve = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const infoReleve = displayData;
+  const informations = infoReleve[dataU[0].type_entreprise][0];
+  console.log(informations);
+
+  let allElements = [];
+
+  for (let key in informations) {
+    if (informations.hasOwnProperty(key)) {
+      informations[key].forEach((element) => {
+        allElements.push(element);
+      });
+    }
+  }
 
   const { data: dataUser } = useQuery({
     queryKey: ["dataUser"],
@@ -34,10 +48,10 @@ const CreationReleve = () => {
     }
   };
   const onSubmit = (data) => {
-    localStorage.setItem("modeleId", data.modele);
-    if (data) navigate("/releve");
+    // localStorage.setItem("modeleId", data.modele);
+    if (data) navigate("/choixClient");
   };
-
+  console.log(checkedItems);
   return (
     <div
       className="text-xs flex justify-center py-8 background-local"
@@ -120,9 +134,7 @@ const CreationReleve = () => {
           </div>
 
           <div className={`flex flex-col my-2 ${errors.format && "has-error"}`}>
-            <label htmlFor="frequence">
-              Choisir le type de produit ou service{" "}
-            </label>
+            <label htmlFor="frequence">Choisir le type de releve</label>
             <select
               name="product"
               className={`border-2 w-[460px] p-3 border-indigo-950 rounded outline-none ${
@@ -165,18 +177,21 @@ const CreationReleve = () => {
             <legend className="text-sm mb-1">
               Selectionner les informations a afficher sur le releve
             </legend>
-
-            <div className=" ">
-              <label class="">
-                Create a to do list
-                <input
-                  type="checkbox"
-                  name="todo"
-                  onChange={handleCheckboxChange}
-                  className="checked:bg-blue-500"
-                />
-              </label>
-            </div>
+            {allElements &&
+              allElements.map((element, index) => {
+                return (
+                  <div className="w-100 my-2">
+                    <label class="flex items-center justify-between border border-indigo-950 p-2 rounded-sm">
+                      <span>{element}</span>
+                      <input
+                        type="checkbox"
+                        name={`${element}`}
+                        onChange={handleCheckboxChange}
+                      />
+                    </label>
+                  </div>
+                );
+              })}
           </fieldset>
           <button
             type="submit"

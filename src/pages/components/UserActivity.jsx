@@ -37,7 +37,7 @@ const UserActivity = () => {
                   className=" rounded-3xl border"
                 />
               ) : (
-                "rien"
+                ""
               )}
             </div>
           </div>
@@ -52,7 +52,6 @@ const UserActivity = () => {
           </section>
           <button className="bg-indigo-950 hover:bg-blue-700 text-white py-2 px-4 rounded-2xl my-2">
             <Link to={"/creation"} className="text-white text-decoration-none">
-              {" "}
               Créer un relevé
             </Link>
           </button>
