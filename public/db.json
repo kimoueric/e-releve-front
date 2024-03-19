@@ -75,17 +75,12 @@
       "id_utilisateur": 2,
       "operations": [
         {
-          "description": "Compte épargne",
+          "description": "Assurance vie ",
           "date": "2024-03-15",
           "taux_envoi": 40
         },
         {
-          "description": "Compte courant",
-          "date": "2024-03-15",
-          "taux_envoi": 30
-        },
-        {
-          "description": "Compte de prêt",
+          "description": "Assurance non vie ",
           "date": "2024-03-15",
           "taux_envoi": 30
         }
@@ -278,6 +273,57 @@
                   "type": "credit",
                   "description": "Dépôt épargne",
                   "montant": 200
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id_utilisateur": 2,
+      "type_service": ["assurance vie", "assurance non vie"],
+      "devise": "USD",
+      "donneesClients": [
+        {
+          "fullName": "John Doe",
+          "adress": "123 Main Street",
+          "numero": "123456789",
+          "email": "john.doe@example.com",
+          "comptes": {
+            "assurance vie": {
+              "numeroCompte": "C123456",
+              "solde": 1500,
+              "soldeMoisPrecedent": 1400,
+              "transactions": [
+                {
+                  "id": "1",
+                  "date": "2023-02-01",
+                  "type": "debit",
+                  "description": "Achat mensuel",
+                  "montant": 100
+                },
+
+                {
+                  "id": "2",
+                  "date": "2023-02-15",
+                  "type": "credit",
+                  "description": "Salaire",
+                  "montant": 300
+                },
+                {
+                  "id": "3",
+                  "date": "2023-02-18",
+                  "type": "credit",
+                  "description": "Depot regulier",
+                  "montant": 800
+                },
+                {
+                  "id": "4",
+                  "date": "2023-02-24",
+                  "type": "debit",
+                  "description": "Achat fourniture",
+                  "montant": 2000
                 }
               ]
             }

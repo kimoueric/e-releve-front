@@ -18,7 +18,6 @@ const CreationReleve = () => {
   } = useForm();
   const infoReleve = displayData;
   const informations = infoReleve[dataU[0].type_entreprise][0];
-  console.log(informations);
 
   let allElements = [];
 
@@ -26,10 +25,11 @@ const CreationReleve = () => {
     if (informations.hasOwnProperty(key)) {
       informations[key].forEach((element) => {
         allElements.push(element);
+        allElements.sort();
       });
     }
   }
-
+  console.log(allElements);
   const { data: dataUser } = useQuery({
     queryKey: ["dataUser"],
     queryFn: () => {
@@ -51,7 +51,6 @@ const CreationReleve = () => {
     // localStorage.setItem("modeleId", data.modele);
     if (data) navigate("/choixClient");
   };
-  console.log(checkedItems);
   return (
     <div
       className="text-xs flex justify-center py-8 background-local"
@@ -180,7 +179,7 @@ const CreationReleve = () => {
             {allElements &&
               allElements.map((element, index) => {
                 return (
-                  <div className="w-100 my-2">
+                  <div className="w-100 my-2" key={index}>
                     <label class="flex items-center justify-between border border-indigo-950 p-2 rounded-sm">
                       <span>{element}</span>
                       <input
@@ -195,7 +194,7 @@ const CreationReleve = () => {
           </fieldset>
           <button
             type="submit"
-            className="w-44 my-6 rounded-xl p-3 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30"
+            className="w-44 my-6 rounded-3xl p-3 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30"
           >
             Suivant
           </button>
