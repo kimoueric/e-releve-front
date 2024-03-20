@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-
 const Dashboard = () => {
   const navigate = useNavigate();
 
@@ -46,6 +45,7 @@ const Dashboard = () => {
             </ul>
           </nav>
         </aside>
+
         <div className="border w-full overflow-auto">
           <Outlet />
         </div>

@@ -7,6 +7,7 @@
       "name": "John",
       "last_name": "Doe",
       "nom_organisation": "Société XYZ",
+      "role": "administrateur",
       "type_entreprise": "banque",
       "adresse_entreprise": "123 Rue de la Liberté, Ville, Pays",
       "photo_url": "https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1483",

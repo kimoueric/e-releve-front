@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ChoixClient from "./pages/components/ChoixClient";
 
+const role = JSON.parse(sessionStorage.getItem("userData"))[0].role;
 const router = createBrowserRouter([
   {
     path: "/",
