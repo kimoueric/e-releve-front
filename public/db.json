@@ -18,6 +18,8 @@
       "email": "jane.doe@example.com",
       "mdp": "p@ssw0rd",
       "name": "Jane",
+      "nom_organisation": "Société XYZ",
+      "role": "agent",
       "last_name": "Doe",
       "nom_organisation": "Compagnie ABC",
       "type_entreprise": "assurance",

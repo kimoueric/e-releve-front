@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 const Dashboard = () => {
+  const [userRole, setUserRole] = useState(null);
+
+  useEffect(() => {
+    const temprole = JSON.parse(sessionStorage.getItem("userData"))?.[0]?.role;
+    if (temprole) {
+      setUserRole(temprole);
+    }
+  }, []);
   const navigate = useNavigate();
 
   const disconnect = () => {
@@ -47,7 +55,7 @@ const Dashboard = () => {
         </aside>
 
         <div className="border w-full overflow-auto">
-          <Outlet />
+          <Outlet context={userRole} />
         </div>
       </div>
     </div>

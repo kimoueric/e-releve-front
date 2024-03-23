@@ -1,6 +1,6 @@
 import React from "react";
 import background from "../assets/bacground.jpeg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const Configuration = () => {
@@ -124,7 +124,7 @@ const Configuration = () => {
             </div>
             {/* right container  */}
             <div>
-              <div className="w-96 h-96  rounded-full p-1">
+              <div className="w-96 h-96    rounded-full p-1">
                 <img
                   src={`${userData[0].photo_url}`}
                   alt="photo"
