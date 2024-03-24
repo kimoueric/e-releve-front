@@ -16,13 +16,13 @@ const AdminPart = () => {
   return (
     <div>
       <div className="flex">
-        <button
+        {/* <button
           onClick={opModal}
           className="bg-indigo-950 me-5 p-2 rounded-xl w-56 text-white"
           id="profilBtn"
         >
           Creer un profil
-        </button>
+        </button> */}
         <button
           onClick={opModal}
           className="bg-indigo-950 me-5 p-2 rounded-xl w-56 text-white"
@@ -32,7 +32,7 @@ const AdminPart = () => {
         </button>
       </div>
       <div className="border mt-4 flex justify-between h-[400px] ">
-        <div className="left  w-1/2 p-2 m-2 ">
+        {/* <div className="left  w-1/2 p-2 m-2 ">
           <h2 className="text-center">Profils</h2>
           <div className="overflow-auto h-[95%] rounded-sm border p-2">
             <div className="item  ">
@@ -45,7 +45,6 @@ const AdminPart = () => {
                     >
                       Profils
                     </th>
-                    {/* <th></th> */}
                     <th className="text-indigo-950  text-[12px]">Modifier</th>
                     <th className="text-indigo-950 text-[12px]">Supprimer</th>
                   </tr>
@@ -61,13 +60,11 @@ const AdminPart = () => {
                     <td className=" text-center">
                       <button className="me-2">
                         <i className="fi fi-rr-pencil text-blue-500"></i>
-                        {/* <EditIcon className="text-blue-500" /> */}
                       </button>
                     </td>
                     <td className=" text-center">
                       <button className="me-2 ">
                         <i className="fi fi-rr-trash-xmark text-red-500"></i>
-                        {/* <DeleteIcon className="text-red-500" /> */}
                       </button>
                     </td>
                   </tr>
@@ -75,10 +72,10 @@ const AdminPart = () => {
               </table>
             </div>
           </div>
-        </div>
-        <div className="right  w-1/2 p-2 m-2 ">
+        </div> */}
+        <div className="right  w-full p-2 m-2 ">
           <h2 className="text-center">Utilisateurs</h2>
-          <div className="overflow-auto h-[95%] rounded-sm border p-2">
+          <div className=" h-[95%] rounded-sm  p-2">
             <div className="item  ">
               <table className="border-separate w-full">
                 <thead className="bg-gray-100">
@@ -89,7 +86,6 @@ const AdminPart = () => {
                     >
                       Noms
                     </th>
-                    {/* <th></th> */}
                     <th className="text-indigo-950  text-[12px]">Modifier</th>
                     <th className="text-indigo-950 text-[12px]">Supprimer</th>
                   </tr>
@@ -105,13 +101,11 @@ const AdminPart = () => {
                     <td className=" text-center">
                       <button className="me-2">
                         <i className="fi fi-rr-pencil text-blue-500"></i>
-                        {/* <EditIcon className="text-blue-500" /> */}
                       </button>
                     </td>
                     <td className=" text-center">
                       <button className="me-2 ">
                         <i className="fi fi-rr-trash-xmark text-red-500"></i>
-                        {/* <DeleteIcon className="text-red-500" /> */}
                       </button>
                     </td>
                   </tr>

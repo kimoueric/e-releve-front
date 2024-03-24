@@ -34,31 +34,32 @@ const ModalPart = ({ openModal, closeModal, btnClickedForModal }) => {
                   <label htmlFor="">Nom utilisateur </label>
                   <input
                     type="text"
-                    className="border-2 w-[460px] p-3  border-indigo-950 rounded outline-none"
+                    className="border-2 w-[460px] p-3 mb-5  border-indigo-950 rounded outline-none"
                     placeholder=""
                   />
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="">Mot de passe</label>
                   <input
                     type="text"
-                    className="border-2 w-[460px] p-3  border-indigo-950 rounded outline-none"
+                    className="border-2 w-[460px] p-3 mb-5 border-indigo-950 rounded outline-none"
                     placeholder=""
                   />
                   <label htmlFor="email">Profil</label>
-                  <input
-                    type="text"
-                    className="border-2 w-[460px] p-3  border-indigo-950 rounded outline-none"
-                    placeholder=""
-                  />
+                  <select name="" id="">
+                    <option value="">Admin</option>
+                  </select>
                 </div>
               )}
             </form>
           </div>
         </Modal.Body>
-        <Modal.Footer className="m-2 flex justify-center">
-          <Button onClick={() => closeModal()} className="bg-green-500 me-3">
+        <Modal.Footer className="m-2 flex justify-center ">
+          <Button
+            onClick={() => closeModal()}
+            className="bg-green-500 me-5 w-[140px]"
+          >
             Ajouter
           </Button>
-          <Button className="bg-red-500" onClick={() => closeModal()}>
+          <Button className="bg-red-500 w-[140px]" onClick={() => closeModal()}>
             Annuler
           </Button>
         </Modal.Footer>
