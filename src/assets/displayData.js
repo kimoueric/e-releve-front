@@ -14,7 +14,7 @@ export const displayData = {
       userInfo: ["nom client", "adresse client", "numero client"],
       accountInfo: ["devise", "numero compte", "solde"],
       transactionsInfo: ["dates", "operations", "debits", "credits"],
-      // otherInfo: ["message"],
+      otherInfo: ["pied du releve"],
     },
   ],
 };

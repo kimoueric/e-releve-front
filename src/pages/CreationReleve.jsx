@@ -66,8 +66,8 @@ const CreationReleve = () => {
         <div className="">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
-              <label>Choisir le modèle de relevé</label>
-              <div className="flex">
+              {/*<label>Choisir le modèle de relevé</label>
+               <div className="flex">
                 <div className="flex flex-col my-2 mx-2">
                   <input
                     type="radio"
@@ -118,10 +118,10 @@ const CreationReleve = () => {
                     htmlFor="modele3"
                   ></label>
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            <div
+            {/* <div
               className={`flex flex-col my-2 ${errors.intitule && "has-error"}`}
             >
               <label htmlFor="intitule">Intitulé du relevé</label>
@@ -132,9 +132,9 @@ const CreationReleve = () => {
                 }`}
                 {...register("intitule", { required: true })}
               />
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className={`flex flex-col my-2 ${errors.format && "has-error"}`}
             >
               <label htmlFor="frequence">Choisir le type de releve</label>
@@ -153,7 +153,7 @@ const CreationReleve = () => {
                     );
                   })}
               </select>
-            </div>
+            </div> */}
             {/* <div className={`flex flex-col my-2 ${errors.date && "has-error"}`}>
             <label htmlFor="frequence">Choisir la fréquence d'envoi</label>
             <input

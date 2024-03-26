@@ -13,6 +13,7 @@ import UserActivity from "./pages/components/UserActivity";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ChoixClient from "./pages/components/ChoixClient";
+import GestionClient from "./pages/GestionClient";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/configuration",
         element: <Configuration />,
+      },
+      {
+        path: "/dashboard/gestionClient",
+        element: <GestionClient />,
       },
     ],
   },

@@ -43,9 +43,11 @@ const ModalPart = ({ openModal, closeModal, btnClickedForModal }) => {
                     className="border-2 w-[460px] p-3 mb-5 border-indigo-950 rounded outline-none"
                     placeholder=""
                   />
-                  <label htmlFor="email">Profil</label>
+                  <label htmlFor="email">Role</label>
                   <select name="" id="">
-                    <option value="">Admin</option>
+                    <option value="">Administrateur</option>
+                    <option value="">Model designer</option>
+                    <option value="">Operateur de compte</option>
                   </select>
                 </div>
               )}

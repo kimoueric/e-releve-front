@@ -34,10 +34,10 @@ const UserActivity = () => {
     <div>
       <div className="ml-6 mt-3 p-2 mx-2">
         <header className="flex justify-between mb-8 items-center">
-          <h1 className="text-xl "> Tableau de bord</h1>
+          {/* <h1 className="text-xl "> Tableau de bord</h1> */}
 
           <div className="flex items-center">
-            <div className="mx-3 w-[50px] h-[50px] ">
+            {/* <div className="mx-3 w-[50px] h-[50px] ">
               {userData ? (
                 <img
                   src={`${userData[0].photo_url}`}
@@ -47,7 +47,7 @@ const UserActivity = () => {
               ) : (
                 ""
               )}
-            </div>
+            </div> */}
           </div>
         </header>
         <main>

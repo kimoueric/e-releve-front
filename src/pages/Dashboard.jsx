@@ -9,6 +9,7 @@ const Dashboard = () => {
       setUserRole(temprole);
     }
   }, []);
+  console.log(userRole);
   const navigate = useNavigate();
 
   const disconnect = () => {
@@ -34,6 +35,18 @@ const Dashboard = () => {
                   </Link>
                 </button>
               </li>
+              {userRole === "agent" && (
+                <li className="mb-2">
+                  <button className="w-full text-left border p-2 hover:bg-indigo-500 transition hover:text-white rounded-xl">
+                    <Link
+                      to="/dashboard/gestionClient"
+                      className="text-decoration-none text-white"
+                    >
+                      Gestion de clients
+                    </Link>
+                  </button>
+                </li>
+              )}
               <li className="mb-2">
                 <button className="w-full text-left border p-2 text-white hover:bg-indigo-500 transition hover:text-white rounded-xl">
                   <Link

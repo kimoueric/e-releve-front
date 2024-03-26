@@ -48,20 +48,15 @@ const Connexion = () => {
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col my-9">
-            <label htmlFor="email">Adresse email</label>
+            <label htmlFor="email">Adresse email ou Nom d'utilisateur</label>
             <input
               type="email"
-              className={`border-2 w-[460px] p-3  border-indigo-950 rounded outline-none  ${
+              className={`border-2 w-[460px] text-[12px] border-indigo-950 rounded outline-none  ${
                 errors.email ? "border-red-500" : ""
               }`}
               {...register("email", {
                 required: "Veuillez fournir une adresse e-mail.",
-                pattern: {
-                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                  message: "Veuillez fournir une adresse e-mail valide.",
-                },
               })}
-              placeholder="example@email.com"
             />
             {errors.email && (
               <p className="text-red-500">{errors.email.message}</p>
@@ -71,7 +66,7 @@ const Connexion = () => {
             <label htmlFor="mdp">Mot de passe</label>
             <input
               type="password"
-              className={`border-2 w-[460px] p-3  border-indigo-950 rounded outline-none  ${
+              className={`border-2 w-[460px] text-[12px]  border-indigo-950 rounded outline-none  ${
                 errors.password ? "border-red-500" : ""
               }`}
               {...register("mot_de_passe", {
@@ -84,7 +79,7 @@ const Connexion = () => {
           </div>
           <button
             type="submit"
-            className="w-44 my-6 rounded-xl p-2 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30 "
+            className="w-44 my-6 rounded-3xl p-3 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30 "
           >
             Se connecter
           </button>
@@ -102,7 +97,7 @@ const Connexion = () => {
         </p>
         <button
           type="submit"
-          className="w-44 my-6 rounded-xl p-2 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30 "
+          className="w-44 my-6 rounded-3xl p-3 bg-indigo-950 text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30 "
         >
           <Link to={"/inscription"} className="text-white text-decoration-none">
             S'incrire

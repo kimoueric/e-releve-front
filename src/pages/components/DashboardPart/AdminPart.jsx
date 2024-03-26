@@ -74,7 +74,7 @@ const AdminPart = () => {
           </div>
         </div> */}
         <div className="right  w-full p-2 m-2 ">
-          <h2 className="text-center">Utilisateurs</h2>
+          {/* <h2 className="text-center">Utilisateurs</h2> */}
           <div className=" h-[95%] rounded-sm  p-2">
             <div className="item  ">
               <table className="border-separate w-full">
