@@ -10,7 +10,7 @@ export const displayData = {
   ],
   assurance: [
     {
-      compagnyInfo: ["agence", "siege"],
+      compagnyInfo: ["agence", "siege", "logo"],
       userInfo: ["nom client", "adresse client", "numero client"],
       accountInfo: ["devise", "numero compte", "solde"],
       transactionsInfo: ["dates", "operations", "debits", "credits"],

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import ModalPart from "./ModalPart";
+import { Link } from "react-router-dom";
 
 const AdminPart = () => {
   const [openModal, setOpenModal] = useState(false);
   const [btnClickedForModal, setBtnClicked] = useState(null);
+
   const closeModal = () => {
     setOpenModal(false);
   };
@@ -99,9 +101,14 @@ const AdminPart = () => {
                       DJORO AKRE ROXANE MARIE AURELIE
                     </td>
                     <td className=" text-center">
-                      <button className="me-2">
-                        <i className="fi fi-rr-pencil text-blue-500"></i>
-                      </button>
+                      <Link to={`/dashboard/adminedit?id=${2}`}>
+                        <button className="me-2">
+                          <i
+                            className="fi fi-rr-pencil text-blue-500"
+                            id="EditBtn"
+                          ></i>
+                        </button>
+                      </Link>
                     </td>
                     <td className=" text-center">
                       <button className="me-2 ">

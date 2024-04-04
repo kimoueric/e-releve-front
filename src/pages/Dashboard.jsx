@@ -35,7 +35,7 @@ const Dashboard = () => {
                   </Link>
                 </button>
               </li>
-              {userRole === "agent" && (
+              {userRole === "operateur de compte" && (
                 <li className="mb-2">
                   <button className="w-full text-left border p-2 hover:bg-indigo-500 transition hover:text-white rounded-xl">
                     <Link

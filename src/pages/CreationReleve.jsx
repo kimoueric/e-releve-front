@@ -47,14 +47,12 @@ const CreationReleve = () => {
       setCheckedItems(checkedItems.filter((item) => item !== name));
     }
   };
-  // console.log(checkedItems);
   const onSubmit = (data) => {
-    // localStorage.setItem("modeleId", data.modele);
     if (data) navigate("/choixClient");
   };
   return (
     <div
-      className="text-xs w-100 py-8 background-local"
+      className="text-xs w-85 py-8 background-local h-screen"
       style={{
         background: `url(${background})`,
       }}
@@ -62,8 +60,8 @@ const CreationReleve = () => {
       <h2 className="text-center text-3xl text-bold text-indigo-950 mb-3">
         Créer un relevé
       </h2>
-      <div className="w-100 rounded-s-xl mx-3 py-9 px-4 flex  items-center justify-between bg-white shadow-2xl">
-        <div className="">
+      <div className="1/3 rounded-s-xl mx-3 py-9 px-4 flex  items-center justify-between bg-white  shadow-2xl">
+        <div className="p-5">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               {/*<label>Choisir le modèle de relevé</label>
@@ -176,7 +174,7 @@ const CreationReleve = () => {
               <option value="pdf">PDF</option>
             </select>
           </div> */}
-            <fieldset className="h-[200px] overflow-auto border-2  p-3 border-indigo-950 rounded outline-none">
+            <fieldset className="h-[300px] overflow-auto border-2  p-5 border-indigo-950 rounded outline-none">
               <legend className="text-sm mb-1">
                 Selectionner les informations a afficher sur le releve
               </legend>
@@ -204,9 +202,9 @@ const CreationReleve = () => {
             </button>
           </form>
         </div>
-        <div className=" w-1/2">
+        <div className="w-2/4  h-[300px] p-0">
           <h6 className="text-center">
-            Une prévisualisation de vos personnalisations apparaîtra ici.
+            Vos personnalisations apparaîtront ici
           </h6>
           <Modele1 data={checkedItems} />
         </div>

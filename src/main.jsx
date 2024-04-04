@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ChoixClient from "./pages/components/ChoixClient";
 import GestionClient from "./pages/GestionClient";
+import AdminEdit from "./pages/AdminEdit";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/gestionClient",
         element: <GestionClient />,
+      },
+      {
+        path: "/dashboard/adminedit",
+        element: <AdminEdit />,
       },
     ],
   },

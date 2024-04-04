@@ -2,8 +2,8 @@ import React from "react";
 
 const Modele1 = ({ data }) => {
   const logoUrl = JSON.parse(sessionStorage.getItem("userData"))[0].logo_url;
-  console.log(logoUrl);
-  console.log(data);
+  // console.log(logoUrl);
+  // console.log(data);
   return (
     <div className="">
       <div className="py-2  flex flex-col justify-center items-center text-sm ">
